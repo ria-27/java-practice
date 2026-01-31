@@ -16,10 +16,11 @@ public class mortgage_calc {
 		int numberOfPayments=years*12;
 		
 		double mortgage=pr*(monthlyrate*Math.pow(1+monthlyrate,numberOfPayments))/
-				(Math.pow(1+monthlyrate, numberOfPayments)-1)
-				;
+				(Math.pow(1+monthlyrate, numberOfPayments)-1);
+		
 		NumberFormat currency=NumberFormat.getCurrencyInstance();
 		String Result=currency.format(mortgage);
 		System.out.println("Monthly Mortgage: "+Result);	
 	}
 }
+
